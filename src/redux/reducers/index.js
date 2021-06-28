@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import counter from './counter'
+import counterReducer from './counter';
+import isLoggedReducer from './isLogged';
+import todosReducer from './todos';
 
 const rootReducer = combineReducers({
-  counter,
-})
+	counter: counterReducer,
+	isLogged: isLoggedReducer,
+	todos: todosReducer,
+});
 
-export default rootReducer
+export default rootReducer;

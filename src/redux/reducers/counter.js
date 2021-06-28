@@ -1,9 +1,9 @@
 import * as CONST from 'utils/constants/actionTypes';
 
-const counter = (state = 0, action) => {
+const counterReducer = (state = 0, action) => {
 	switch (action.type) {
 		case CONST.INCREMENT:
-			return state + 1;
+			return state + action.payload;
 		case CONST.DECREMENT:
 			return state - 1;
 		default:
@@ -11,4 +11,4 @@ const counter = (state = 0, action) => {
 	}
 };
 
-export default counter;
+export default counterReducer;
