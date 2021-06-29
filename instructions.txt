@@ -1,0 +1,7 @@
+//Create an new file called posts.js under actions and reducers folder. 
+//Inside actions/posts.js file, create an action called getPosts(). As the name suggests, get the posts from this url. https://jsonplaceholder.typicode.com/posts
+//Inside reducers/posts.js file, create a postsReducer function, which basically contains the reducer for our posts. I expect a switch statement there.
+//Under reducers/index.js file, I expect you to combine the new posts reducer with other reducer so you can dispatch the actions available on that reducer.
+//I expect a new state called posts.
+//Create a new component, under components folder, called components/Posts/index.js. As the name suggets, you should output the posts to the console nalang muna. 
+//Add the Posts component to our App.js file. 

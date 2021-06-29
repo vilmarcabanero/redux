@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from 'redux/actions/counter';
 import { login, logout } from 'redux/actions/isLogged';
 import { getTodos } from 'redux/actions/todos';
+import Posts from 'components/Posts'
 
 function App() {
 	const dispatch = useDispatch();
@@ -10,7 +11,7 @@ function App() {
 	const isLogged = useSelector(state => state.isLogged);
 	const todos = useSelector(state => state.todos);
 	// console.log(isLogged)
-	console.log(todos);
+	// console.log(todos);
 
 	React.useEffect(() => {
 		dispatch(getTodos());
@@ -43,6 +44,7 @@ function App() {
 					<br />
 					<button onClick={() => dispatch(increment(5))}>+5</button> <br />
 					<button onClick={() => dispatch(logout())}>Logout</button>
+					<Posts />
 				</div>
 			) : (
 				<button onClick={() => dispatch(login())}>Login</button>
